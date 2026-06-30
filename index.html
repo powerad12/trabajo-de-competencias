@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App de Matemáticas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Bienvenido</p>
+          <h1>Explora tus operaciones favoritas</h1>
+          <p class="description">
+            Elige una sección para practicar suma, resta, multiplicación,
+            división, trigonometría o figuras geométricas con 30 preguntas y
+            60 segundos de tiempo.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Secciones de matemáticas">
+        <button class="card active" data-section="suma">
+          <span class="icon">➕</span>
+          <h2>Suma</h2>
+          <p>Practica operaciones básicas con números enteros.</p>
+        </button>
+
+        <button class="card" data-section="resta">
+          <span class="icon">➖</span>
+          <h2>Resta</h2>
+          <p>Descubre cómo resolver diferencias paso a paso.</p>
+        </button>
+
+        <button class="card" data-section="multiplicacion">
+          <span class="icon">✖️</span>
+          <h2>Multiplicación</h2>
+          <p>Mejora tu velocidad con productos simples y dobles.</p>
+        </button>
+
+        <button class="card" data-section="division">
+          <span class="icon">➗</span>
+          <h2>División</h2>
+          <p>Aprende a repartir cantidades de forma clara.</p>
+        </button>
+
+        <button class="card" data-section="trigonometria">
+          <span class="icon">📐</span>
+          <h2>Trigonometría</h2>
+          <p>Explora seno, coseno y tangente con ejemplos.</p>
+        </button>
+
+        <button class="card" data-section="figuras">
+          <span class="icon">🔺</span>
+          <h2>Figuras geométricas</h2>
+          <p>Identifica áreas, perímetros y propiedades.</p>
+        </button>
+      </section>
+
+      <section class="detail-panel" aria-live="polite">
+        <div class="detail-header">
+          <div>
+            <h3 id="section-title">Suma</h3>
+            <p id="section-description">
+              En esta sección podrás practicar operaciones de suma con números de
+              distinto nivel.
+            </p>
+          </div>
+          <button id="start-quiz-btn" class="start-btn">Comenzar prueba</button>
+        </div>
+
+        <div id="quiz-area" class="quiz-area hidden">
+          <div class="quiz-meta">
+            <span id="question-counter">Pregunta 1/30</span>
+            <span id="timer">60s</span>
+          </div>
+          <h4 id="question-text"></h4>
+          <div id="options" class="options"></div>
+          <p id="feedback" class="feedback"></p>
+        </div>
+
+        <div id="result-area" class="result-area hidden"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
